@@ -1,4 +1,4 @@
-from classtools import AttrDisplay
+from OOP.classtools import AttrDisplay
 
 
 class Person(AttrDisplay):

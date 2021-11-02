@@ -12,5 +12,8 @@ for obj in (bob,sue):
     db[obj.name] = obj
 db.close()
 
-
+import glob
+print(glob.glob('person*'))
+print(open('persondb.dir').read())
+print(open('persondb.dat','rb').read())
 
