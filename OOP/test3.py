@@ -1,7 +1,4 @@
-from test import FirstClass
-
-
-class ThirdClass(FirstClass):  # Inherit from SecondClass
+class ThirdClass:  # Inherit from SecondClass
     def __init__(self, value):  # On "ThirdClass(value)"
         self.data = value
 
@@ -31,5 +28,3 @@ if __name__ == '__main__':
     l1 = SuperList([1, 23, 4, 5, 6])
     l1.append(3333)
     d = ThirdClass(32)
-
-
