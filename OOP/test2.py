@@ -11,4 +11,10 @@ class Nameofclass():
     @staticmethod
     def stc_methd(param1,param2):
         pass
+    def display(self):
+        print(self.class_attribute,Nameofclass.class_attribute)
+
+c = Nameofclass('a','b')
+c.class_attribute = 'testing'
+print(c.display())
 
