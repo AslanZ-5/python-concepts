@@ -66,14 +66,15 @@ def outline(func):
 
 
 def list_items(func):
-    def inner(*args,**kwargs):
-        func(*args,**kwargs)
+    def inner(*args, **kwargs):
+        func(*args, **kwargs)
         # print(f'args = {args}')
         # print(f'kwargs = {kwargs}')
         for i in args:
             print(f'args = {i}')
-        for k,v in kwargs.items():
+        for k, v in kwargs.items():
             print(f'key={k} value={v}')
+
     return inner
 
 
@@ -82,10 +83,18 @@ def list_items(func):
 def display(msg):
     print(msg)
 
+
 display(msg=433)
 
-
-a = {'as':342,'dd':34}
+a = {'as': 342, 'dd': 34}
 print(a.items())
 print(a.values())
 print(a.keys())
+
+
+def multipliers():
+    return [lambda x, i=i: i * x for i in range(4)]
+
+
+print([m(2) for m in multipliers()])
+print(multipliers())
