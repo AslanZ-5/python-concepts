@@ -34,3 +34,10 @@ if __name__ == '__main__':
     X,Y = TopTest(),SubTest()
     print(X.gatherAttrs())
     print(Y)
+
+import docstr
+
+# print(docstr.__doc__)
+# print(docstr.fun.__doc__)
+# print(docstr.spam.__doc__)
+# print(docstr.spam.method.__doc__)
