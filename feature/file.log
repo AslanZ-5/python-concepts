@@ -1,0 +1,7 @@
+2021-11-07 11:15:36,461 - root - DEBUG - tessssttt
+2021-11-07 11:16:20,020 - root - DEBUG - tessssttt
+2021-11-07 11:16:20,021 - root - DEBUG - debug message here
+2021-11-07 11:16:20,021 - root - INFO - info message here
+2021-11-07 11:16:20,021 - root - WARNING - warning message here
+2021-11-07 11:16:20,021 - root - ERROR - error message here
+2021-11-07 11:16:20,021 - root - CRITICAL - critical message here
