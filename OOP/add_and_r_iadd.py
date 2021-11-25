@@ -52,3 +52,12 @@ class Commuter5:  # Propagate class type in results
 
     def __str__(self):
         return '<Commuter5: %s>' % self.val
+
+
+class Number:
+    def __init__(self, val):
+        self.val = val
+
+    def __iadd__(self, other):  # __iadd__ explicit: x += y
+        self.val += other  # Usually returns self
+        return self
