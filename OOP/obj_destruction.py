@@ -11,4 +11,3 @@ class Life:
 
 
 b = Life('aslan')
-b = 'loreta'
