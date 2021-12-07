@@ -1,5 +1,5 @@
 class C:
-    data = 33
+    data = 19
 
     def __gt__(self, other):
         return self.data > other
@@ -7,7 +7,20 @@ class C:
     def __lt__(self, other):
         return self.data < other
 
+    def __bool__(self):
+        if self.data < 20:
+            return False
+        else:
+            return True
 
-x = C()
-print(x > 3)
-print(x < 333)
+
+# x = C()
+# print(bool(x))
+
+
+class C1:
+    def __len__(self):
+        return 0
+
+x = C1()
+print(bool(x))
