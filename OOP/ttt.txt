@@ -1,0 +1,14 @@
+anything else that may be coded in its superclasses). It needs to define only
+what is unique about it—the data conversion logic. When this file is run, it
+makes and runs an instance that reads from the file trispam.txt and writes the
+uppercase equivalent of that file to the stdout stream:
+c:\code> type trispam.txt
+spam
+Spam
+SPAM!
+c:\code> python converters.py
+SPAM
+SPAM
+SPAM!
+To process different sorts of streams, pass in different sorts of objects to the
+class construction call. Here, we use an output file instead of a stream:
