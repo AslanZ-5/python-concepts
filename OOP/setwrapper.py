@@ -1,3 +1,4 @@
+# Extending Types by Embedding
 class Set:
     def __init__(self, value=[]):
         self.data = []
@@ -41,6 +42,18 @@ class Set:
         return iter(self.data)
 
 
-x = Set([1,3,5,7])
-print(x | Set([1,4,6]))
-print(x.union(Set([1,4,7])))
+x = Set([1, 3, 5, 7])
+print(x | Set([1, 4, 6]))
+print(x.union(Set([1, 4, 7])))
+
+
+# Extending types by subclassing
+class Mylist(list):
+    def __getitem__(self, offset):
+        print('(indexing %s at %s)' % (self, offset))
+        return list.__getitem__(self, offset-1)
+if __name__ == "__main__":
+    print(list('abc'))
+    x = Mylist('abc')  # __init__ inherited from list
+    print(x)    # __repr__ inherited from list
+    print(x[1]) # Mylist.__getitem__  Customizes list superclass method
