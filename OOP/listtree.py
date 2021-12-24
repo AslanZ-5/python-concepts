@@ -1,5 +1,5 @@
 """
-This class achives its goal by traversing the inheritance tree -- from an
+This class achieves its goal by traversing the inheritance tree -- from an
 instance's __class__ to its class, and then from the class's __bases__ to all
 superclasses recursively, scanning each object's attribute __dict__ along the way. Ultimately, it concatenates each tree portion's
 string as the recursion unwinds.
