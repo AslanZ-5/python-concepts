@@ -76,3 +76,38 @@ def mapattrs(instance, withobject=False, bysource=False):
     if not withobject:
         attr2obj = filterdictvals(attr2obj,object)
     return attr2obj if not bysource else invertdict(attr2obj)
+
+
+if __name__ == '__main__':
+    print('Classic classes in 2.X, new-style in 3.X')
+    class A:
+        attr1 = 1
+    class B(A):
+        attr2 = 2
+    class C(A):
+        attr1 = 3
+    class D(B, C):
+        pass
+
+    I = D()
+    print('Py=>%s' % I.attr1)
+    trace(inheritance(I),'INH\n')
+    trace(mapattrs(I), "ATTRS\n")
+    trace(mapattrs(I,bysource=True), 'OBJS\n')
+    trace(mapattrs(I,withobject=True), 'WITHOBJECT\n')
+
+    print('New-style classes in 2.X, new-style in 3.X')
+    class A:
+        attr1 = 1
+    class B(A):
+        attr2 = 2
+    class C(A):
+        attr1 = 3
+    class D(B, C):
+        pass
+    I = D()
+    print('Py=>%s' % I.attr1)
+    trace(inheritance(I), 'INH\n')
+    trace(mapattrs(I), "ATTRS\n")
+    trace(mapattrs(I, bysource=True), 'OBJS\n')
+    trace(mapattrs(I, withobject=True), 'WITHOBJECT\n')
