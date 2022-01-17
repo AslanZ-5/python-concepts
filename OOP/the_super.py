@@ -20,7 +20,23 @@ class C(A,B):
         super().act()
 
 
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+class Chef1(Employee):
+    def __init__(self,name):
+        super().__init__(name,50000)
 
-a = A()
-b = B()
-c = C()
+class Server1(Employee):
+    def __init__(self,name):
+        super().__init__(name,40000)
+
+class TwoJobs(Chef1,Server1):
+    pass
+tom = TwoJobs('tom')
+
+bob = Chef1('bob')
+bob2 = Server1('bob2')
+print(bob.salary)
+print(bob2.salary)
