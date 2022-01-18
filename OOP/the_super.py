@@ -34,9 +34,4 @@ class Server1(Employee):
 
 class TwoJobs(Chef1,Server1):
     pass
-tom = TwoJobs('tom')
 
-bob = Chef1('bob')
-bob2 = Server1('bob2')
-print(bob.salary)
-print(bob2.salary)

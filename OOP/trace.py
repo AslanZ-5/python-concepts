@@ -6,7 +6,13 @@ class Wrapper:
         print(f'Trace {item}')
         return getattr(self.wrapper, item)
 
-a = Wrapper([33,2])
+class D:
+    a = 1
 
-a.append('de3')
-a.pop()
+X = D()
+
+X.a = 2
+D.a = 12
+print(X.a)
+J = D()
+print(J.a)
