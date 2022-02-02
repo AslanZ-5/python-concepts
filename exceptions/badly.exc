@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\zurab\PycharmProjects\python-cpt\exceptions\badly.py", line 5, in <module>
+    inverse(0)
+  File "C:\Users\zurab\PycharmProjects\python-cpt\exceptions\badly.py", line 3, in inverse
+    return 1/x
+ZeroDivisionError: division by zero
