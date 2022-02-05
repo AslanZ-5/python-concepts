@@ -1,3 +1,3 @@
-print(ord('a'))
-print(hex(ord('a')))
-print(chr(97))
+b = b"spam"
+print(b[0])
+print(list(b))
