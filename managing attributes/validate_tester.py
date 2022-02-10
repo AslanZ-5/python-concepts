@@ -1,4 +1,4 @@
-from validate_descriptor import CardHolder
+from validate_getattribute import CardHolder
 
 bob = CardHolder('1234-3216','Bob Smith',40,'123 main st')
 print(bob)
