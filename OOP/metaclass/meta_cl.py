@@ -6,7 +6,8 @@ class MetaOne(type):
     def __init__(Class,*args,**kwargs):
         print('In MetaTwo.init:', *args,**kwargs, sep='\n....')
         print('...init class object:', list(Class.__dict__.keys()
-                                            ))
+
+                                              ))
 
 
 class Eggs:
